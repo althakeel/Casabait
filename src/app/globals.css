@@ -1,0 +1,55 @@
+/* TODO: Replace --color-primary / --color-secondary with final brand palette once icon set is provided. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #0b3d2e;
+  --color-secondary: #c9a24b;
+  --color-neutral-dark: #1a1a1a;
+  --color-neutral-light: #f7f6f3;
+  --color-background: #ffffff;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-neutral-dark antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex min-h-[44px] items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-white transition-colors hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary;
+  }
+
+  .btn-secondary {
+    @apply inline-flex min-h-[44px] items-center justify-center rounded-md border-2 border-primary bg-transparent px-6 py-3 text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary;
+  }
+
+  .btn-accent {
+    @apply inline-flex min-h-[44px] items-center justify-center rounded-md bg-secondary px-6 py-3 text-sm font-medium text-neutral-dark transition-colors hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary;
+  }
+
+  .section-padding {
+    @apply px-4 py-16 sm:px-6 lg:px-8 lg:py-24;
+  }
+
+  .container-custom {
+    @apply mx-auto max-w-7xl;
+  }
+
+  .input-field {
+    @apply w-full min-h-[44px] rounded-md border border-gray-300 bg-white px-4 py-3 text-base text-neutral-dark placeholder:text-gray-400 focus:border-primary focus:outline-none focus:ring-2 focus:ring-green-900/20;
+  }
+}

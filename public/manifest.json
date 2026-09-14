@@ -1,0 +1,16 @@
+{
+  "name": "Casa Bait Property Consultant",
+  "short_name": "Casa Bait",
+  "description": "Dubai real estate agency — buying, selling, renting & investment advisory",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0B3D2E",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64",
+      "type": "image/x-icon"
+    }
+  ]
+}

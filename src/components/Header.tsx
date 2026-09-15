@@ -2,12 +2,19 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Icon } from "./Icon";
 import { Logo } from "./Logo";
 import { NAV_LINKS, PHONE, PHONE_LINK } from "@/lib/constants";
 
+function isActivePath(pathname: string, href: string): boolean {
+  if (href === "/") return pathname === "/";
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
+
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header className="sticky top-0 z-50 border-b border-gray-200 bg-white/95 backdrop-blur-sm">
@@ -15,15 +22,23 @@ export function Header() {
         <Logo variant="header" />
 
         <nav className="hidden items-center gap-6 lg:flex" aria-label="Main navigation">
-          {NAV_LINKS.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-sm font-medium text-neutral-dark transition-colors hover:text-primary"
-            >
-              {link.label}
-            </Link>
-          ))}
+          {NAV_LINKS.map((link) => {
+            const isActive = isActivePath(pathname, link.href);
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                aria-current={isActive ? "page" : undefined}
+                className={`text-sm font-medium transition-colors ${
+                  isActive
+                    ? "text-primary font-semibold"
+                    : "text-neutral-dark hover:text-primary"
+                }`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </nav>
 
         <div className="hidden items-center gap-4 lg:flex">
@@ -63,16 +78,24 @@ export function Header() {
               </button>
             </div>
             <nav className="flex flex-1 flex-col gap-1 overflow-y-auto p-4" aria-label="Mobile navigation">
-              {NAV_LINKS.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="min-h-[44px] rounded-md px-4 py-3 text-base font-medium text-neutral-dark transition-colors hover:bg-neutral-light hover:text-primary"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  {link.label}
-                </Link>
-              ))}
+              {NAV_LINKS.map((link) => {
+                const isActive = isActivePath(pathname, link.href);
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    aria-current={isActive ? "page" : undefined}
+                    className={`min-h-[44px] rounded-md px-4 py-3 text-base font-medium transition-colors ${
+                      isActive
+                        ? "bg-primary/10 font-semibold text-primary"
+                        : "text-neutral-dark hover:bg-neutral-light hover:text-primary"
+                    }`}
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                );
+              })}
             </nav>
             <div className="border-t p-4">
               <a href={PHONE_LINK} className="mb-3 block text-sm font-medium text-primary">

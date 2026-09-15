@@ -60,9 +60,9 @@ export default function AreasPage() {
                     </div>
                     <p className="mt-4 text-gray-600 leading-relaxed">{area.longDescription}</p>
                     <div className="mt-6 flex gap-4">
-                      <Link href={`/properties?area=${area.slug}`} className="btn-primary text-sm">
+                      {/* <Link href={`/properties?area=${area.slug}`} className="btn-primary text-sm">
                         View Properties
-                      </Link>
+                      </Link> */}
                       <Link href="/contact" className="btn-secondary text-sm">
                         Speak to a Consultant
                       </Link>

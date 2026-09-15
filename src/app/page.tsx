@@ -59,14 +59,14 @@ export default function HomePage() {
             Exceptional, personalised property services for buyers, sellers, tenants, landlords, and investors across Dubai&apos;s top communities.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Link href="/properties" className="btn-accent min-w-[200px]">
+            {/* <Link href="/properties" className="btn-accent min-w-[200px]">
               Browse Properties
-            </Link>
+            </Link> */}
             <Link href="/contact" className="btn-secondary !border-white !text-white hover:!bg-white hover:!text-primary min-w-[200px]">
               Book a Free Consultation
             </Link>
           </div>
-          <PropertySearchBar />
+          {/* <PropertySearchBar /> */}
         </div>
       </section>
 
@@ -94,7 +94,7 @@ export default function HomePage() {
       </section>
 
       {/* Featured Properties */}
-      <section className="section-padding">
+      {/* <section className="section-padding">
         <div className="container-custom">
           <SectionHeading title="Featured Properties" subtitle="Handpicked listings across Dubai's most sought-after communities." />
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -110,10 +110,10 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Areas We Cover */}
-      <section className="section-padding bg-neutral-light">
+      {/* <section className="section-padding bg-neutral-light">
         <div className="container-custom">
           <SectionHeading title="Areas We Cover" subtitle="Deep expertise across Dubai's fastest-growing residential communities." />
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -129,7 +129,7 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Services */}
       <section className="section-padding">
@@ -180,12 +180,12 @@ export default function HomePage() {
       <section className="section-padding">
         <div className="container-custom">
           <SectionHeading title="What Our Clients Say" subtitle="Trusted by buyers, sellers, tenants, and investors across Dubai." />
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {testimonials.map((t) => (
-              <AnimatedSection key={t.name}>
-                <blockquote className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
-                  <p className="text-sm italic text-gray-600">&ldquo;{t.quote}&rdquo;</p>
-                  <footer className="mt-4">
+              <AnimatedSection key={t.name} className="h-full">
+                <blockquote className="flex h-full flex-col rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
+                  <p className="flex-1 text-sm italic text-gray-600">&ldquo;{t.quote}&rdquo;</p>
+                  <footer className="mt-4 border-t border-gray-100 pt-4">
                     <p className="font-medium text-neutral-dark">{t.name}</p>
                     <p className="text-xs text-gray-500">{t.role}</p>
                   </footer>
@@ -207,9 +207,9 @@ export default function HomePage() {
             <Link href="/contact" className="btn-primary">
               Speak to a Consultant
             </Link>
-            <Link href="/properties" className="btn-secondary">
+            {/* <Link href="/properties" className="btn-secondary">
               Browse Properties
-            </Link>
+            </Link> */}
           </div>
         </div>
       </section>

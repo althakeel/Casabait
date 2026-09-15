@@ -20,7 +20,7 @@ import { STOCK_IMAGES } from "@/lib/images";
 const valueProps = [
   { icon: "map-pin", title: "Deep Local Knowledge", description: "Expert insight across Dubai's fastest-growing communities including JVT, JVC, and Al Furjan." },
   { icon: "search", title: "Geolocation Search", description: "Our mapping approach helps you pinpoint the ideal home based on lifestyle and connectivity." },
-  { icon: "handshake", title: "Direct Communication", description: "Deal with knowledgeable consultants who provide transparent, personalised guidance — not just listings." },
+  { icon: "handshake", title: "Direct Communication", description: "Deal with knowledgeable consultants who provide transparent, personalised guidance not just listings." },
   { icon: "shield", title: "RERA Registered", description: "Fully compliant and registered with RERA (ORN 36486) for your peace of mind." },
   { icon: "key", title: "End-to-End Support", description: "From search and viewings to negotiation, paperwork, and post-sale guidance." },
   { icon: "trending-up", title: "Investment Advisory", description: "Data-driven ROI analysis and market trends to help investors make informed decisions." },

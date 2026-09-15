@@ -37,7 +37,7 @@ export default function AboutPage() {
         <div className="container-custom max-w-3xl">
           <h2 className="text-2xl font-bold text-neutral-dark">Our Story</h2>
           <p className="mt-4 text-gray-600 leading-relaxed">
-            Casa Bait Property Consultant was founded with a clear vision: to redefine the property experience in Dubai through personalised service, deep local knowledge, and transparent communication. We believe that finding the right property — whether to live in or invest in — should be an empowering journey, not an overwhelming one.
+            Casa Bait Property Consultant was founded with a clear vision: to redefine the property experience in Dubai through personalised service, deep local knowledge, and transparent communication. We believe that finding the right property whether to live in or invest in should be an empowering journey, not an overwhelming one.
           </p>
           <p className="mt-4 text-gray-600 leading-relaxed">
             Operating across Dubai&apos;s most dynamic communities including Jumeirah Village Triangle, Jumeirah Village Circle, Al Furjan, Dubai Production City, Motor City, and Dubailand, our team of experienced consultants brings together market expertise and a genuine commitment to client success.
@@ -45,7 +45,7 @@ export default function AboutPage() {
 
           <h2 className="mt-12 text-2xl font-bold text-neutral-dark">Our Mission</h2>
           <p className="mt-4 text-gray-600 leading-relaxed">
-            To provide exceptional, end-to-end property services that help buyers, sellers, tenants, landlords, and investors achieve their goals with confidence — backed by RERA compliance, data-driven advisory, and a geolocation-based approach to property search.
+            To provide exceptional, end-to-end property services that help buyers, sellers, tenants, landlords, and investors achieve their goals with confidence backed by RERA compliance, data-driven advisory, and a geolocation-based approach to property search.
           </p>
         </div>
       </section>

@@ -6,7 +6,7 @@ export const services: Service[] = [
     title: "Buying Property",
     shortDescription: "Expert buyer representation with geolocation-based search across Dubai's top communities.",
     description:
-      "Finding the right property in Dubai requires more than browsing listings — it demands local market knowledge, negotiation skill, and a consultant who understands your lifestyle and investment goals. Casa Bait's buying service combines a geolocation property-mapping approach with personalised advisory to help you pinpoint your ideal home quickly and confidently.",
+      "Finding the right property in Dubai requires more than browsing listings it demands local market knowledge, negotiation skill, and a consultant who understands your lifestyle and investment goals. Casa Bait's buying service combines a geolocation property-mapping approach with personalised advisory to help you pinpoint your ideal home quickly and confidently.",
     benefits: [
       "Geolocation-based property search tailored to your preferences",
       "Access to off-market and pre-market listings",
@@ -32,7 +32,7 @@ export const services: Service[] = [
     title: "Selling Property",
     shortDescription: "Professional marketing, accurate valuation, and skilled negotiation to maximise your sale price.",
     description:
-      "Selling your property in Dubai requires strategic pricing, professional marketing, and experienced negotiation. Casa Bait provides comprehensive seller representation — from accurate market valuation and targeted marketing campaigns to managing viewings, offers, and the transfer process.",
+      "Selling your property in Dubai requires strategic pricing, professional marketing, and experienced negotiation. Casa Bait provides comprehensive seller representation from accurate market valuation and targeted marketing campaigns to managing viewings, offers, and the transfer process.",
     benefits: [
       "Data-driven property valuation",
       "Professional photography and listing optimisation",
@@ -68,7 +68,7 @@ export const services: Service[] = [
       "Maintenance coordination during tenancy",
     ],
     process: [
-      { step: 1, title: "Requirements", description: "We understand your rental needs — budget, area, property type, and move-in date." },
+      { step: 1, title: "Requirements", description: "We understand your rental needs budget, area, property type, and move-in date." },
       { step: 2, title: "Shortlist", description: "Curated property options matching your criteria are presented for review." },
       { step: 3, title: "Viewings", description: "We arrange viewings and provide honest assessments of each property." },
       { step: 4, title: "Lease & Move-In", description: "We handle offer submission, lease signing, Ejari, and key handover." },
@@ -84,7 +84,7 @@ export const services: Service[] = [
     title: "Off-Plan Investment",
     shortDescription: "Curated off-plan project advisory with developer vetting and payment plan analysis.",
     description:
-      "Off-plan property investment in Dubai offers unique advantages — flexible payment plans, early-buyer pricing, and the potential for capital appreciation before handover. Casa Bait's off-plan advisory service helps investors identify the right projects, verify developer credentials, and structure purchases for optimal returns.",
+      "Off-plan property investment in Dubai offers unique advantages flexible payment plans, early-buyer pricing, and the potential for capital appreciation before handover. Casa Bait's off-plan advisory service helps investors identify the right projects, verify developer credentials, and structure purchases for optimal returns.",
     benefits: [
       "Curated selection of vetted off-plan projects",
       "Developer track record and escrow verification",
@@ -101,16 +101,16 @@ export const services: Service[] = [
     ],
     faqs: [
       { question: "Is off-plan property safe to buy in Dubai?", answer: "Yes, when purchased from RERA-registered developers with escrow-protected payments. We verify every developer and project before recommending it to clients." },
-      { question: "Can I sell my off-plan property before handover?", answer: "In most cases, yes — after meeting the developer's minimum payment threshold (typically 30–40%). We advise on resale timing and pricing strategy." },
+      { question: "Can I sell my off-plan property before handover?", answer: "In most cases, yes after meeting the developer's minimum payment threshold (typically 30–40%). We advise on resale timing and pricing strategy." },
       { question: "What happens if the project is delayed?", answer: "RERA regulations provide buyer protections for delayed projects. We monitor construction progress and advise on your options if delays occur." },
     ],
   },
   {
     slug: "property-management",
     title: "Property Management",
-    shortDescription: "Hands-off property management for landlords — maintenance, tenant relations, and compliance.",
+    shortDescription: "Hands-off property management for landlords maintenance, tenant relations, and compliance.",
     description:
-      "Owning rental property in Dubai shouldn't mean constant oversight. Casa Bait's property management service handles the day-to-day responsibilities — from tenant communication and maintenance coordination to rent collection and regulatory compliance — so you can enjoy passive returns with peace of mind.",
+      "Owning rental property in Dubai shouldn't mean constant oversight. Casa Bait's property management service handles the day-to-day responsibilities from tenant communication and maintenance coordination to rent collection and regulatory compliance so you can enjoy passive returns with peace of mind.",
     benefits: [
       "Tenant communication and issue resolution",
       "Scheduled and emergency maintenance coordination",
@@ -136,7 +136,7 @@ export const services: Service[] = [
     title: "Investment Advisory",
     shortDescription: "Data-driven ROI analysis, market trends, and portfolio strategy for property investors.",
     description:
-      "Smart property investment in Dubai requires more than intuition — it demands data, market insight, and a clear strategy. Casa Bait's investment advisory service provides ROI modelling, area comparisons, market trend analysis, and portfolio guidance tailored to your financial objectives and risk profile.",
+      "Smart property investment in Dubai requires more than intuition it demands data, market insight, and a clear strategy. Casa Bait's investment advisory service provides ROI modelling, area comparisons, market trend analysis, and portfolio guidance tailored to your financial objectives and risk profile.",
     benefits: [
       "ROI and cash flow modelling for individual properties",
       "Area comparison reports across Dubai communities",

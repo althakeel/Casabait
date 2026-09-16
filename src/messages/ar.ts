@@ -230,6 +230,11 @@ export const ar: Dictionary = {
       phonePlaceholder: "+971 XX XXX XXXX",
       messagePlaceholder: "أخبرنا عن متطلباتك العقارية...",
       selectOption: "اختر خياراً",
+      sending: "جاري الإرسال...",
+      errorGeneric:
+        "تعذّر إرسال رسالتك حالياً. يرجى المحاولة مرة أخرى قريباً، أو التواصل معنا عبر الهاتف أو واتساب.",
+      errorRateLimit: "عدد كبير من المحاولات. يرجى الانتظار بضع دقائق ثم المحاولة مجدداً.",
+      errorUnavailable: "نموذج التواصل غير متاح مؤقتاً. يرجى الاتصال بنا أو مراسلتنا مباشرة.",
       options: {
         buy: "شراء عقار",
         sell: "بيع عقار",

@@ -228,6 +228,12 @@ export const en = {
       phonePlaceholder: "+971 XX XXX XXXX",
       messagePlaceholder: "Tell us about your property requirements...",
       selectOption: "Select an option",
+      sending: "Sending...",
+      errorGeneric:
+        "We couldn't send your message right now. Please try again shortly, or contact us by phone or WhatsApp.",
+      errorRateLimit: "Too many submissions. Please wait a few minutes and try again.",
+      errorUnavailable:
+        "The contact form is temporarily unavailable. Please call or email us directly.",
       options: {
         buy: "Buying Property",
         sell: "Selling Property",

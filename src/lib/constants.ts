@@ -4,8 +4,8 @@ export const SITE_URL = "https://www.casabait.ae";
 export const RERA_ORN = "36486";
 export const PHONE = "+971549942554";
 export const PHONE_LINK = "tel:+971549942554";
-export const EMAIL = "info@casabait.ae";
-export const WHATSAPP_LINK = "https://wa.me/971549942554";
+export const EMAIL = "info@casabait.com";
+export const WHATSAPP_LINK = "https://wa.me/971503057267";
 export const ADDRESS = {
   street: "Al Saqr Business Tower - Second Floor - Sheikh Zayed Rd - DIFC",
   city: "Dubai",
@@ -23,13 +23,10 @@ export const MAP_EMBED_URL = `https://maps.google.com/maps?q=${encodeURIComponen
 export const MAP_DIRECTIONS_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(MAP_ADDRESS)}`;
 
 export const SOCIAL_LINKS = {
-  facebook: "https://facebook.com/casabait",
-  instagram: "https://instagram.com/casabait",
-  linkedin: "https://linkedin.com/company/casabait",
-  youtube: "https://youtube.com/@casabait",
-  tiktok: "https://tiktok.com/@casabait",
-  pinterest: "https://pinterest.com/casabait",
-  twitter: "https://x.com/casabait",
+  facebook: "https://www.facebook.com/photo.php?fbid=122098802060647988&set=a.122098800314647988&type=3",
+  instagram: "https://www.instagram.com/casabait.uae/",
+  linkedin: "https://www.linkedin.com/in/casa-bait-87493a2b2",
+  tiktok: "https://www.tiktok.com/@casabait4",
   whatsapp: WHATSAPP_LINK,
 };
 

@@ -23,8 +23,14 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# local env files
+# local env files — never commit credentials
+.env
+.env.local
 .env*.local
+.env.production
+
+# email.json uses ${VAR} placeholders only (safe to commit).
+# Real SMTP credentials belong in .env / .env.local (gitignored above).
 
 # vercel
 .vercel

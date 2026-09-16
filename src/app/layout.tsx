@@ -51,7 +51,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${inter.variable} ${playfair.variable} ${ibmPlexArabic.variable} ${notoNaskhArabic.variable} ${locale === "ar" ? "locale-ar" : ""}`}
     >
       <head>
-        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/favicon.png" />
         <link rel="manifest" href="/manifest.json" />
       </head>
       <body className="flex min-h-screen flex-col font-sans">

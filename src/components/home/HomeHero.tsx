@@ -19,7 +19,7 @@ export function HomeHero({ locale, dict }: HomeHeroProps) {
   const address = dict.contact.address;
 
   return (
-    <section className="relative -mt-20 flex min-h-[78vh] flex-col justify-end overflow-hidden pt-20 lg:min-h-[85vh]">
+    <section className="relative flex min-h-[78vh] flex-col justify-end overflow-hidden pt-20 lg:min-h-[85vh]">
       <Image
         src={STOCK_IMAGES.heroSkyline}
         alt="Dubai skyline at dusk — Casa Bait Property Consultant"

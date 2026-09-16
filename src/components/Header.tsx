@@ -51,7 +51,9 @@ export function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-all duration-300 ${
+      className={`z-50 transition-all duration-300 ${
+        isHome ? "fixed inset-x-0 top-0" : "sticky top-0"
+      } ${
         isTransparent
           ? "border-b border-white/10 bg-transparent"
           : "border-b border-primary/10 bg-ivory/95 shadow-sm backdrop-blur-md"

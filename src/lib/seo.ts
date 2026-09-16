@@ -1,5 +1,7 @@
 import { Metadata } from "next";
 import { SITE_NAME, SITE_URL, SOCIAL_LINKS, ADDRESS, PHONE, EMAIL, RERA_ORN } from "./constants";
+import { localePath } from "@/i18n/navigation";
+import type { Locale } from "@/i18n/config";
 
 interface PageSEO {
   title: string;
@@ -7,6 +9,8 @@ interface PageSEO {
   path: string;
   image?: string;
   noIndex?: boolean;
+  locale?: Locale;
+  siteName?: string;
 }
 
 export function createMetadata({
@@ -15,24 +19,36 @@ export function createMetadata({
   path,
   image = "/og-image.jpg",
   noIndex = false,
+  locale = "en",
+  siteName = SITE_NAME,
 }: PageSEO): Metadata {
-  const url = `${SITE_URL}${path}`;
-  const fullTitle = path === "/" ? title : `${title} | ${SITE_NAME}`;
+  const canonicalPath = localePath(locale, path);
+  const url = `${SITE_URL}${canonicalPath}`;
+  const fullTitle = path === "/" ? title : `${title} | ${siteName}`;
+  const enUrl = `${SITE_URL}${localePath("en", path)}`;
+  const arUrl = `${SITE_URL}${localePath("ar", path)}`;
 
   return {
     title: fullTitle,
     description,
     metadataBase: new URL(SITE_URL),
-    alternates: { canonical: url },
+    alternates: {
+      canonical: url,
+      languages: {
+        en: enUrl,
+        ar: arUrl,
+        "x-default": enUrl,
+      },
+    },
     robots: noIndex ? { index: false, follow: false } : { index: true, follow: true },
     openGraph: {
       title: fullTitle,
       description,
       url,
-      siteName: SITE_NAME,
-      locale: "en_AE",
+      siteName,
+      locale: locale === "ar" ? "ar_AE" : "en_AE",
       type: "website",
-      images: [{ url: image, width: 1200, height: 630, alt: SITE_NAME }],
+      images: [{ url: image, width: 1200, height: 630, alt: siteName }],
     },
     twitter: {
       card: "summary_large_image",

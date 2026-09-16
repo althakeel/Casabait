@@ -23,6 +23,8 @@ import {
   FileText,
   Handshake,
   Calculator,
+  MessageCircle,
+  Wrench,
   LucideIcon,
 } from "lucide-react";
 
@@ -51,6 +53,8 @@ const iconMap: Record<string, LucideIcon> = {
   "file-text": FileText,
   handshake: Handshake,
   calculator: Calculator,
+  "message-circle": MessageCircle,
+  wrench: Wrench,
 };
 
 interface IconProps {
@@ -62,12 +66,17 @@ interface IconProps {
 
 export function Icon({ name, size = 24, className = "", strokeWidth = 2 }: IconProps) {
   const IconComponent = iconMap[name] || Home;
+  const strokeClass = className.includes("icon-gold")
+    ? "stroke-secondary"
+    : className.includes("icon-ivory")
+      ? "stroke-ivory"
+      : "stroke-primary";
+
   return (
     <IconComponent
       size={size}
       strokeWidth={strokeWidth}
-      className={className}
-      style={{ stroke: "var(--color-primary)" }}
+      className={`${strokeClass} ${className}`}
       aria-hidden="true"
     />
   );
@@ -84,7 +93,7 @@ export function IconSlot({
   return (
     <div
       data-icon-slot={name}
-      className={`flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 ${className}`}
+      className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary/10 ${className}`}
       aria-hidden="true"
     >
       <Icon name={name} size={24} />

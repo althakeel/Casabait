@@ -18,7 +18,7 @@ export function GoogleMapEmbed({
   const src = query ? buildEmbedUrl(query) : MAP_EMBED_URL;
 
   return (
-    <div className={`overflow-hidden rounded-lg border border-gray-200 ${className}`}>
+    <div className={`overflow-hidden border border-primary/10 shadow-card ${className}`}>
       <iframe
         src={src}
         title={title}

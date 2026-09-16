@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useLocale } from "@/i18n/LocaleProvider";
 
 interface LogoProps {
   variant: "header" | "footer";
@@ -15,11 +18,13 @@ const LOGO = {
 };
 
 export function Logo({ variant, className = "" }: LogoProps) {
+  const { localizeHref, dict } = useLocale();
+
   return (
     <Link
-      href="/"
+      href={localizeHref("/")}
       className={`inline-flex shrink-0 ${className}`}
-      aria-label="Casa Bait Home"
+      aria-label={dict.nav.home}
     >
       <Image
         src={LOGO.src}

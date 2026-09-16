@@ -6,15 +6,18 @@
 import Link from "next/link";
 import { Area } from "@/lib/types";
 import { SafeImage } from "./SafeImage";
+import { useLocale } from "@/i18n/LocaleProvider";
 
 interface AreaCardProps {
   area: Area;
 }
 
 export function AreaCard({ area }: AreaCardProps) {
+  const { localizeHref } = useLocale();
+
   return (
     <Link
-      href={`/areas#${area.slug}`}
+      href={`${localizeHref("/areas")}#${area.slug}`}
       className="group overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-md"
     >
       <div className="relative aspect-[16/10] overflow-hidden">

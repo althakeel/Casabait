@@ -7,12 +7,15 @@ import Link from "next/link";
 import { Property } from "@/lib/types";
 import { Icon } from "./Icon";
 import { PropertyImage } from "./PropertyImage";
+import { useLocale } from "@/i18n/LocaleProvider";
 
 interface PropertyCardProps {
   property: Property;
 }
 
 export function PropertyCard({ property }: PropertyCardProps) {
+  const { localizeHref } = useLocale();
+
   return (
     <article className="group overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-md">
       <div className="relative aspect-[4/3] overflow-hidden">
@@ -21,7 +24,7 @@ export function PropertyCard({ property }: PropertyCardProps) {
           alt={`${property.propertyType} in ${property.area}, Dubai — ${property.title}`}
           className="object-cover transition-transform duration-300 group-hover:scale-105"
         />
-        <span className="absolute left-3 top-3 rounded-md bg-primary px-2 py-1 text-xs font-medium uppercase text-white">
+        <span className="absolute start-3 top-3 rounded-md bg-primary px-2 py-1 text-xs font-medium uppercase text-white">
           {property.type === "sale" ? "For Sale" : "For Rent"}
         </span>
       </div>
@@ -43,7 +46,7 @@ export function PropertyCard({ property }: PropertyCardProps) {
           </span>
         </div>
         <Link
-          href={`/properties/${property.slug}`}
+          href={localizeHref(`/properties/${property.slug}`)}
           className="mt-4 inline-flex min-h-[44px] w-full items-center justify-center rounded-md border border-primary text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-white"
         >
           View Details

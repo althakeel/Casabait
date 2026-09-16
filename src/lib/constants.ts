@@ -33,16 +33,20 @@ export const SOCIAL_LINKS = {
   whatsapp: WHATSAPP_LINK,
 };
 
-export const NAV_LINKS = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/services", label: "Services" },
-  // { href: "/properties", label: "Properties" },
-  // { href: "/off-plan", label: "Off-Plan" },
-  { href: "/areas", label: "Areas" },
-  { href: "/blog", label: "Blog" },
-  { href: "/contact", label: "Contact" },
+export const NAV_ROUTES = [
+  { href: "/", navKey: "home" as const },
+  { href: "/about", navKey: "about" as const },
+  { href: "/services", navKey: "services" as const },
+  { href: "/areas", navKey: "areas" as const },
+  { href: "/blog", navKey: "blog" as const },
+  { href: "/contact", navKey: "contact" as const },
 ];
+
+/** @deprecated Use NAV_ROUTES with dictionary labels */
+export const NAV_LINKS = NAV_ROUTES.map(({ href, navKey }) => ({
+  href,
+  label: navKey.charAt(0).toUpperCase() + navKey.slice(1),
+}));
 
 export const BUSINESS_HOURS = [
   { day: "Sunday – Thursday", hours: "9:30 AM – 7:00 PM" },

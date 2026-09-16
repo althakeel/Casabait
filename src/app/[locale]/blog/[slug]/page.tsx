@@ -88,7 +88,7 @@ export default function BlogDetailPage({ params }: Props) {
                 <span>{post.readTime}</span>
               </div>
 
-              <div className="relative mt-8 aspect-[16/9] overflow-hidden border border-primary/10 shadow-card">
+              <div className="relative mt-8 aspect-[16/9] overflow-hidden rounded-lg border border-primary/10 shadow-card">
                 <SafeImage
                   src={post.image}
                   alt={`${post.title} — Dubai real estate blog article`}
@@ -104,7 +104,7 @@ export default function BlogDetailPage({ params }: Props) {
                 ))}
               </div>
 
-              <div className="mt-12 border border-secondary/40 bg-secondary/5 p-8 text-center shadow-gold lg:p-10">
+              <div className="mt-12 rounded-lg border border-secondary/40 bg-secondary/5 p-8 text-center shadow-gold lg:p-10">
                 <p className="font-serif text-xl font-semibold text-charcoal">{dict.blogArticle.cta.title}</p>
                 <Link href={localePath(locale, "/contact")} className="btn-primary mt-6 inline-flex">
                   {dict.common.speakToConsultant}

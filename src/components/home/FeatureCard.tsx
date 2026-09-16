@@ -20,7 +20,7 @@ export function FeatureCard({ icon, title, description, index }: FeatureCardProp
 
   return (
 
-    <article className="group relative flex h-full flex-col border border-primary/10 bg-surface p-6 transition-all duration-300 hover:border-secondary/50 hover:shadow-card-hover lg:p-7">
+    <article className="group relative flex h-full flex-col rounded-lg border border-primary/10 bg-surface p-6 transition-all duration-300 hover:border-secondary/50 hover:shadow-card-hover lg:p-7">
 
       <span
 
@@ -36,7 +36,7 @@ export function FeatureCard({ icon, title, description, index }: FeatureCardProp
 
       <div
 
-        className="mb-4 flex h-12 w-12 items-center justify-center border border-secondary/40 bg-ivory transition-colors duration-300 group-hover:border-secondary group-hover:bg-secondary/10"
+        className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg border border-secondary/40 bg-ivory transition-colors duration-300 group-hover:border-secondary group-hover:bg-secondary/10"
 
         aria-hidden="true"
 

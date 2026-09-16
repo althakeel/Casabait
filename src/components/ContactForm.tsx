@@ -87,7 +87,7 @@ export function ContactForm({ showPropertyInterest = true, submitLabel }: Contac
 
   if (status === "success") {
     return (
-      <div className="border border-secondary/30 bg-secondary/5 p-8 text-center shadow-gold">
+      <div className="rounded-lg border border-secondary/30 bg-secondary/5 p-8 text-center shadow-gold">
         <p className="font-serif text-xl font-semibold text-primary">{dict.common.thankYouTitle}</p>
         <p className="mt-2 text-sm text-neutral-dark/70">{dict.common.thankYouBody}</p>
       </div>

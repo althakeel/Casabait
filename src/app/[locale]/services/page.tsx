@@ -70,7 +70,7 @@ export default function ServicesPage({ params }: Props) {
 
       <section className="section-padding-sm bg-primary">
         <div className="container-custom">
-          <div className="relative overflow-hidden border border-secondary/40 bg-charcoal/40 px-6 py-12 text-center shadow-gold sm:px-10 sm:py-14">
+          <div className="relative overflow-hidden rounded-lg border border-secondary/40 bg-charcoal/40 px-6 py-12 text-center shadow-gold sm:px-10 sm:py-14">
             <div
               className="pointer-events-none absolute inset-0 bg-grid-pattern bg-grid opacity-50"
               aria-hidden="true"

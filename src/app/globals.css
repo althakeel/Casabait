@@ -13,6 +13,7 @@
   --color-ivory: #faf7f2;
   --color-surface: #ffffff;
   --button-radius: 0.5rem; /* 8px — single radius for all .btn-* variants */
+  --card-radius: 0.5rem; /* 8px — single radius for all card UI */
 }
 
 @layer base {
@@ -96,7 +97,11 @@
   }
 
   .premium-panel {
-    @apply border border-primary/10 bg-white;
+    @apply rounded-lg border border-primary/10 bg-white;
+  }
+
+  .card-ui {
+    @apply rounded-lg;
   }
 
   .input-field {
@@ -117,7 +122,7 @@
   }
 
   .premium-card {
-    @apply border border-primary/10 bg-surface p-6 shadow-card lg:p-8;
+    @apply rounded-lg border border-primary/10 bg-surface p-6 shadow-card lg:p-8;
   }
 
   .article-body {

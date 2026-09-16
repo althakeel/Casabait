@@ -14,7 +14,7 @@ export function TestimonialCard({ quote, name, role }: TestimonialCardProps) {
 
   return (
 
-    <blockquote className="relative flex h-full flex-col border-l-[3px] border-secondary bg-surface p-6 shadow-card lg:p-7">
+    <blockquote className="relative flex h-full flex-col rounded-lg border border-primary/10 border-s-[3px] border-s-secondary bg-surface p-6 shadow-card lg:p-7">
 
       <span className="font-serif text-6xl leading-none text-secondary/30" aria-hidden="true">
 

@@ -36,7 +36,7 @@ export function ServiceSection({ service, index, locale, dict }: ServiceSectionP
         <div className="mb-10 flex flex-col gap-6 border-b border-primary/10 pb-10 lg:flex-row lg:items-start lg:justify-between lg:gap-12">
           <div className="flex items-start gap-5">
             <div
-              className="flex h-14 w-14 shrink-0 items-center justify-center border border-secondary/40 bg-ivory shadow-gold"
+              className="flex h-14 w-14 shrink-0 items-center justify-center rounded-lg border border-secondary/40 bg-ivory shadow-gold"
               aria-hidden="true"
             >
               <Icon name={iconName} size={24} className="icon-gold" />
@@ -63,7 +63,7 @@ export function ServiceSection({ service, index, locale, dict }: ServiceSectionP
               {service.benefits.map((benefit, benefitIndex) => (
                 <li key={`${service.slug}-benefit-${benefitIndex}`} className="flex items-start gap-3">
                   <span
-                    className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center border border-secondary/40 bg-secondary/10"
+                    className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-md border border-secondary/40 bg-secondary/10"
                     aria-hidden="true"
                   >
                     <Icon name="check" size={14} className="icon-gold" strokeWidth={2.5} />

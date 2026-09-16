@@ -79,7 +79,7 @@ export default function AboutPage({ params }: Props) {
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
             {t.values.items.map((value, i) => (
               <AnimatedSection key={value.title} delay={i * 0.06} className="h-full">
-                <article className="group flex h-full flex-col border border-primary/10 bg-ivory p-6 transition-all duration-300 hover:border-secondary/50 hover:shadow-card-hover">
+                <article className="group flex h-full flex-col rounded-lg border border-primary/10 bg-ivory p-6 transition-all duration-300 hover:border-secondary/50 hover:shadow-card-hover">
                   <span className="font-serif text-3xl font-light text-secondary/70" aria-hidden="true">
                     {String(i + 1).padStart(2, "0")}
                   </span>
@@ -102,7 +102,7 @@ export default function AboutPage({ params }: Props) {
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
             {teamMembers.map((member, i) => (
               <AnimatedSection key={member.name} delay={i * 0.06} className="h-full">
-                <article className="flex h-full flex-col items-center border border-primary/10 bg-surface p-6 text-center shadow-card transition-all duration-300 hover:border-secondary/40 hover:shadow-card-hover">
+                <article className="flex h-full flex-col items-center rounded-lg border border-primary/10 bg-surface p-6 text-center shadow-card transition-all duration-300 hover:border-secondary/40 hover:shadow-card-hover">
                   <InitialsAvatar initials={member.initials} size="lg" />
                   <h3 className="mt-4 font-serif text-lg font-semibold text-charcoal">{member.name}</h3>
                   <p className="mt-1 text-[11px] font-bold uppercase tracking-[0.16em] text-secondary">
@@ -117,7 +117,7 @@ export default function AboutPage({ params }: Props) {
 
       <section className="section-padding-sm bg-primary">
         <div className="container-custom">
-          <div className="relative overflow-hidden border border-secondary/40 bg-charcoal/40 px-6 py-12 text-center shadow-gold sm:px-10 sm:py-14">
+          <div className="relative overflow-hidden rounded-lg border border-secondary/40 bg-charcoal/40 px-6 py-12 text-center shadow-gold sm:px-10 sm:py-14">
             <div
               className="pointer-events-none absolute inset-0 bg-grid-pattern bg-grid opacity-50"
               aria-hidden="true"

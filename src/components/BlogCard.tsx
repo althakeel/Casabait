@@ -17,7 +17,7 @@ export function BlogCard({ post }: BlogCardProps) {
   const { localizeHref } = useLocale();
 
   return (
-    <article className="group flex h-full flex-col overflow-hidden border border-primary/10 bg-surface shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-secondary/40 hover:shadow-card-hover">
+    <article className="group flex h-full flex-col overflow-hidden rounded-lg border border-primary/10 bg-surface shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-secondary/40 hover:shadow-card-hover">
       <div className="relative aspect-[16/10] overflow-hidden border-b border-primary/10">
         <SafeImage
           src={post.image}

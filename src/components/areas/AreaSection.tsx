@@ -26,13 +26,13 @@ export function AreaSection({ area, index, locale, speakToLabel }: AreaSectionPr
     >
       <div className="container-custom section-padding-sm">
         <div
-          className={`border border-primary/10 p-6 shadow-card lg:p-10 ${
+          className={`rounded-lg border border-primary/10 p-6 shadow-card lg:p-10 ${
             isIvory ? "bg-surface" : "bg-ivory"
           }`}
         >
           <div className="grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-12">
             <div
-              className={`relative order-1 aspect-[4/3] overflow-hidden border border-primary/10 ${
+              className={`relative order-1 aspect-[4/3] overflow-hidden rounded-lg border border-primary/10 ${
                 imageOnRight ? "lg:order-2" : "lg:order-1"
               }`}
             >

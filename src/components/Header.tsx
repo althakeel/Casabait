@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Icon } from "./Icon";
@@ -16,6 +17,7 @@ function isActivePath(cleanPath: string, href: string): boolean {
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
   const { locale, dict, localizeHref } = useLocale();
@@ -35,6 +37,19 @@ export function Header() {
   useEffect(() => {
     setMobileOpen(false);
   }, [pathname]);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [mobileOpen]);
 
   const navLinkClass = (isActive: boolean) => {
     const base =
@@ -151,20 +166,20 @@ export function Header() {
         </button>
       </div>
 
-      {mobileOpen && (
-        <div
-          className="fixed inset-0 z-50 lg:hidden"
-          role="dialog"
-          aria-modal="true"
-          aria-label={dict.nav.mobileNav}
-        >
-          <div className="fixed inset-0 bg-black/50" onClick={() => setMobileOpen(false)} aria-hidden="true" />
-          <div className="fixed end-0 top-0 flex h-full w-80 max-w-[85vw] flex-col bg-ivory shadow-xl">
+      {mounted &&
+        mobileOpen &&
+        createPortal(
+          <div
+            className="fixed inset-0 z-[100] flex flex-col bg-ivory lg:hidden"
+            role="dialog"
+            aria-modal="true"
+            aria-label={dict.nav.mobileNav}
+          >
             <div className="flex items-center justify-between border-b border-primary/10 px-4 py-4">
               <Logo variant="header" />
               <button
                 type="button"
-                className="flex min-h-[44px] min-w-[44px] items-center justify-center"
+                className="flex min-h-[44px] min-w-[44px] items-center justify-center text-charcoal"
                 onClick={() => setMobileOpen(false)}
                 aria-label={dict.nav.closeMenu}
               >
@@ -218,8 +233,8 @@ export function Header() {
               })}
             </nav>
 
-            <div className="border-t border-primary/10 p-4">
-              <a href={PHONE_LINK} className="mb-3 block text-sm font-medium text-primary">
+            <div className="border-t border-primary/10 p-4 pb-[max(1rem,env(safe-area-inset-bottom))]">
+              <a href={PHONE_LINK} className="mb-3 block text-sm font-medium text-primary" dir="ltr">
                 {PHONE}
               </a>
               <Link
@@ -230,9 +245,9 @@ export function Header() {
                 {dict.nav.bookConsultation}
               </Link>
             </div>
-          </div>
-        </div>
-      )}
+          </div>,
+          document.body
+        )}
     </header>
   );
 }
